@@ -9,16 +9,24 @@
       rel="stylesheet"
       href="assets/font-awesome-4.7.0/css/font-awesome.min.css"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik&display=swap"
+      rel="stylesheet"
+    />
     <title>BARATODOS</title>
   </head>
   <body>
-    <header>
-      <h1><i class="fa fa-shopping-cart" aria-hidden="true"></i>Baratodos</h1>
+    <header class="header">
+      <h1 class="header__titulo">
+        <i class="fa fa-shopping-cart" aria-hidden="true"></i>Baratodos
+      </h1>
     </header>
     <main>
       <section class="cards">
-        <div>
-          <h3>Productos</h3>
+        <div class="cards__titulo">
+          <h3 class="cards__titulo__texto">Productos</h3>
         </div>
         <ul id="productos">
           <li id="target" class="target">
@@ -31,16 +39,16 @@
               <h3 class="target__producto__titulo">Camiseta Negra</h3>
               <p class="target__producto__descripcion">
                 Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                Aperiam molestiae itaque qui tempora, quas inventore, iste
-                ratione eius voluptas corrupti impedit enim natus quaerat quae,
-                corporis sapiente nulla iusto sequi?
+                Aperiam molestiae itaque qui tempora, quas inventore.
               </p>
             </div>
             <div class="target__funciones">
               <p class="target__funciones__cantidad">
                 <span id="etiqueta">0</span>X
               </p>
-              <p class="target__funciones__precio">Lps.1000.00</p>
+              <p class="target__funciones__precio">
+                Lps. <span id="precio">1000.00</span>
+              </p>
               <i
                 id="plus"
                 class="fa fa-plus-circle plus"
@@ -53,20 +61,22 @@
       </section>
 
       <section class="detalle">
-        <h3>Resumen de la orden</h3>
-        <p>Aqui encontrara el detalle de su compra</p>
-        <ul id="orden"></ul>
-        <ul>
-          <li>
+        <h3 class="detalle__titulo">Resumen de la orden</h3>
+        <hr />
+        <p class="detalle__parrafo">Aqui encontrara el detalle de su compra</p>
+        <ul id="orden" class="orden"></ul>
+        <hr />
+        <ul class="detalle__informacion">
+          <li class="detalle__informacion__envio">
             <p>Envio</p>
-            <p>L.<span>1000.00</span></p>
+            <p>L.<span id="envio">1000.00</span></p>
           </li>
-          <li>
+          <li class="detalle__informacion__envio">
             <p>Total</p>
-            <p>L.<span>0.00</span></p>
+            <p>L.<span id="total">0.00</span></p>
           </li>
         </ul>
-        <a href="">"procesar a Pagar</a>
+        <a class="detalle__boton" href="">Procesar a Pago</a>
       </section>
     </main>
     <script src="js/index.js"></script>

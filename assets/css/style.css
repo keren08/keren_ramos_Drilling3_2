@@ -1,3 +1,148 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Rubik", sans-serif;
+}
 
+body {
+  background: rgb(10, 188, 193);
+  background: linear-gradient(142deg, rgb(10, 188, 193) 1%, rgb(8, 163, 222) 50%, rgb(21, 21, 255) 100%);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+  min-height: 100vh;
+}
+
+.header {
+  width: 100%;
+  background-color: whitesmoke;
+  padding: 2%;
+}
+
+main {
+  display: flex;
+  padding: 2%;
+  justify-content: center;
+}
+
+.cards {
+  background-color: aliceblue;
+  margin: 2%;
+  width: 100%;
+  max-width: 500px;
+  border-radius: 10px;
+}
+.cards__titulo {
+  padding: 4%;
+}
+.cards__titulo__texto {
+  padding: 2%;
+  border-radius: 15px;
+  background-color: wheat;
+  width: 20%;
+}
+
+.target {
+  display: flex;
+  margin: 4%;
+}
+.target__producto {
+  width: 50%;
+}
+.target__funciones {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+.target__funciones p, .target__funciones i {
+  margin-left: 4%;
+}
+.target__funciones p {
+  font-weight: 900;
+}
+
+.detalle {
+  background-color: aliceblue;
+  height: 100%;
+  padding: 2%;
+  border-radius: 10px;
+  margin: 2%;
+}
+.detalle__informacion {
+  margin-bottom: 5%;
+  list-style: none;
+}
+.detalle__informacion__envio {
+  display: flex;
+  justify-content: space-between;
+}
+.detalle__boton {
+  background-color: black;
+  color: white;
+  padding: 2%;
+  margin-top: 10%;
+  text-decoration: none;
+  border-radius: 10px;
+  margin-bottom: 10%;
+}
+
+.orden {
+  margin: 4% 0%;
+}
+.orden__informacion {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1%;
+  font-weight: 900;
+}
+
+@media screen and (max-width: 700px) {
+  main {
+    display: flex;
+    padding: 2%;
+    flex-direction: column-reverse;
+  }
+  .cards {
+    margin: 2%;
+    width: 96%;
+  }
+  .cards__titulo {
+    padding: 4%;
+  }
+  .cards__titulo__texto {
+    padding: 2%;
+    border-radius: 15px;
+    background-color: wheat;
+    width: 30%;
+  }
+  .detalle {
+    padding: 5%;
+  }
+  .target {
+    display: flex;
+    flex-direction: column;
+    margin: 4%;
+  }
+  .target__producto {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .target__funciones {
+    margin-top: 4%;
+    width: 100%;
+  }
+  .target__funciones p, .target__funciones i {
+    margin-left: 4%;
+  }
+  .target__funciones p {
+    font-weight: 900;
+  }
+}
 
 /*# sourceMappingURL=style.css.map */
