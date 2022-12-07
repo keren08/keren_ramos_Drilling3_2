@@ -1,18 +1,48 @@
-const producto1 = new producto(1,"Camisa",120.00,"camisa.jpg","Camisa sport");
-const producto2 = new producto(2,"Pantalon",500.00,"pantalon.jpg","pantalon jean");
-const producto3 = new producto(3,"chaqueta",900.00,"chaqueta.jpg","Chaqueta de cuero");
-const producto4 = new producto(4,"calsetines",50.00,"calsetines.jpg","Calsetines para el inierno");
-const listaProductos = [producto1,producto2,producto3,producto4];
-let listaCompras = [];
+const plus = document.getElementById('plus');
+const less = document.getElementById('less');
+const etiqueta = document.getElementById('etiqueta');
+const orden = document.getElementById('orden');
+
+plus.addEventListener('click',(e)=>{
+let contadorActual =parseInt(etiqueta.textContent,10);
+ let contador = contadorActual+1;
+ etiqueta.textContent=contador;
+
+ actualizarLista(contadorActual,contador);
+});
+
+less.addEventListener('click',(e)=>{
+    let contadorActual =parseInt(etiqueta.textContent,10);
+    let contador = (contadorActual-1)<0?0:(contadorActual-1);
+    etiqueta.textContent=contador;
+    actualizarLista(contadorActual,contador);
+   });
 
 
-console.log(listaProductos);
+   function actualizarLista(contadorActual,contador){
+
+    const html = ` <li>
+    <p>camiseta Negra</p>
+    <p>L<span>1000.00</span></p>
+    </li>`;
+
+    if(contadorActual<contador){
+        orden.insertAdjacentHTML('beforeend',html);
+    }else if(contadorActual>contador){
+        orden.querySelector('li').remove();
+    }
+
+    
+   }
 
 
 
 
 
 
+
+
+// contructor de objeto persona
 function producto(id,nombre,precio,img,descripcion){
  this.id= id;
  this.nombre= nombre;

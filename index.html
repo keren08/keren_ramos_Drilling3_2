@@ -20,9 +20,54 @@
         <div>
           <h3>Productos</h3>
         </div>
+        <ul id="productos">
+          <li id="target" class="target">
+            <div class="target__producto">
+              <img
+                class="target__producto__img"
+                src="assets/img/camisa.jpg"
+                alt=""
+              />
+              <h3 class="target__producto__titulo">Camiseta Negra</h3>
+              <p class="target__producto__descripcion">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                Aperiam molestiae itaque qui tempora, quas inventore, iste
+                ratione eius voluptas corrupti impedit enim natus quaerat quae,
+                corporis sapiente nulla iusto sequi?
+              </p>
+            </div>
+            <div class="target__funciones">
+              <p class="target__funciones__cantidad">
+                <span id="etiqueta">0</span>X
+              </p>
+              <p class="target__funciones__precio">Lps.1000.00</p>
+              <i
+                id="plus"
+                class="fa fa-plus-circle plus"
+                aria-hidden="true"
+              ></i>
+              <i id="less" class="fa fa-trash" aria-hidden="true"></i>
+            </div>
+          </li>
+        </ul>
       </section>
 
-      <section class="detalle"></section>
+      <section class="detalle">
+        <h3>Resumen de la orden</h3>
+        <p>Aqui encontrara el detalle de su compra</p>
+        <ul id="orden"></ul>
+        <ul>
+          <li>
+            <p>Envio</p>
+            <p>L.<span>1000.00</span></p>
+          </li>
+          <li>
+            <p>Total</p>
+            <p>L.<span>0.00</span></p>
+          </li>
+        </ul>
+        <a href="">"procesar a Pagar</a>
+      </section>
     </main>
     <script src="js/index.js"></script>
   </body>
